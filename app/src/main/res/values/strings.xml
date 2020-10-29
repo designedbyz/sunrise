@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Sunrise</string>
     <string name="fuzzy_pet_description">A cuddly fuzzy pet</string>
+    <string name="location_permission_not_granted_title">Location permission not granted!</string>
+    <string name="location_permission_not_granted_message">You have not granted the location permission. Cats and Dogs shown will reflect the current time in NYC.</string>
+
+    <string name="play_services_not_available_title">Google Play Service Not Available</string>
+    <string name="play_services_not_available_message">Google Play Services are not currently available on your device. Cats and dogs will be shown as if you were in NYC/</string>
+    <string name="ok">ok</string>
 </resources>

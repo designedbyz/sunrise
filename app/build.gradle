@@ -37,7 +37,7 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.0-RC2" // JVM dependency
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlinSerialization" // JVM dependency
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesAndroid"
     implementation "androidx.core:core-ktx:$ktx"
     implementation "androidx.appcompat:appcompat:$appCompat"
@@ -46,13 +46,20 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofit"
     implementation "com.squareup.retrofit2:converter-jackson:$retrofit"
     implementation "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:$serializationConverter"
-    implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.11.2'
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:$jackson"
+
+    implementation "com.google.android.gms:play-services-location:$playLocation"
     implementation "com.squareup.picasso:picasso:$picasso"
     implementation "com.soywiz.korlibs.klock:klock-jvm:$klock"
     api "com.google.dagger:dagger:$dagger"
+//    testImplementation 'org.junit.jupiter:junit-jupiter'
     kapt "com.google.dagger:dagger-compiler:$dagger"
 
     testImplementation "junit:junit:$junit"
+//    testRuntimeOnly("org.junit.vintage:junit-vintage-engine:5.7.0")
+    testImplementation "io.mockk:mockk:$mockk"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$kotlinCoroutines"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutines"
     androidTestImplementation "androidx.test.ext:junit:$testExtensions"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso"
 

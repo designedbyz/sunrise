@@ -1,8 +1,6 @@
 package com.designedbyz.sunrise.time
 
-import com.mavenclinic.Result
-import com.mavenclinic.SunRiseSetResults
-import retrofit2.Call
+import com.mavenclinic.SunRiseSetResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -14,5 +12,5 @@ interface SunriseService {
 
     @GET("/json")
     suspend fun getSunRiseSetResults(@Query("lat") lat:Float, @Query("lng") lng:Float,
-                             @Query("date") date:String) : Result
+                             @Query("date") date:String) : SunRiseSetResponse
 }

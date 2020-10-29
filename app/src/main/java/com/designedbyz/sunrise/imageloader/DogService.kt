@@ -1,6 +1,5 @@
 package com.designedbyz.sunrise.imageloader
 
-import retrofit2.Call
 import retrofit2.http.GET
 
 interface DogService {
@@ -10,5 +9,6 @@ interface DogService {
     }
 
     @GET("/woof.json")
-    fun getDog() : Call<Dog>
+    suspend fun getDog() : Dog
+
 }

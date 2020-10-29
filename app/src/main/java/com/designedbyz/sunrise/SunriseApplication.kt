@@ -5,8 +5,5 @@ import com.designedbyz.sunrise.di.DaggerApplicationComponent
 
 class SunriseApplication: Application() {
 
-    val applicationComponent = DaggerApplicationComponent.create()
-//    override fun onCreate() {
-//        super.onCreate()
-//    }
+    val applicationComponent = DaggerApplicationComponent.builder().application(this).build()
 }
